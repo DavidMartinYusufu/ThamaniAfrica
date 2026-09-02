@@ -1,0 +1,753 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      content="Volunteer with THAMANI or partner with us to support women, youth and resilient communities across Northern Nigeria."
+      name="description"
+    />
+    <title>Volunteer &amp; Partner | THAMANI</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <style>
+      /* =========================================
+       VOLUNTEER / PARTNER PAGE
+       ========================================= */
+
+      .involve-hero {
+        min-height: 64svh;
+        position: relative;
+        display: grid;
+        align-items: end;
+        overflow: hidden;
+        background: #211816;
+        color: #fff;
+      }
+
+      .involve-hero-bg {
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(
+            90deg,
+            rgba(25, 14, 12, 0.88),
+            rgba(25, 14, 12, 0.56) 50%,
+            rgba(25, 14, 12, 0.16)
+          ),
+          url("/images/hero-home-1.webp") center/cover no-repeat;
+      }
+
+      .involve-hero-content {
+        position: relative;
+        z-index: 1;
+        padding: 115px 0 70px;
+      }
+
+      .involve-hero-content h1 {
+        max-width: 880px;
+        font-size: clamp(3rem, 6.2vw, 5.8rem);
+        line-height: 0.95;
+        letter-spacing: -0.06em;
+        margin: 10px 0 20px;
+      }
+
+      .involve-hero-content h1 em {
+        color: var(--yellow);
+        font-style: normal;
+      }
+
+      .involve-hero-content > p:last-child {
+        max-width: 600px;
+        color: rgba(255, 255, 255, 0.82);
+        line-height: 1.72;
+        font-size: 1rem;
+      }
+
+      .involve-intro {
+        padding: 90px 0 65px;
+        background: #fff;
+      }
+
+      .involve-intro-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.25fr;
+        gap: 65px;
+        align-items: start;
+      }
+
+      .involve-intro h2 {
+        font-size: clamp(2.1rem, 4vw, 3.6rem);
+        line-height: 1;
+        margin: 10px 0 0;
+      }
+
+      .involve-intro-copy {
+        border-left: 1px solid var(--line);
+        padding-left: 30px;
+      }
+
+      .involve-intro-copy p {
+        color: var(--muted);
+        line-height: 1.75;
+        margin-bottom: 14px;
+        max-width: 650px;
+      }
+
+      .engagement-section {
+        padding: 90px 0;
+        background: #f9f5f2;
+      }
+
+      .engagement-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 22px;
+        align-items: start;
+      }
+
+      .engagement-card {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 34px;
+        box-shadow: 0 16px 40px rgba(33, 24, 22, 0.06);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .engagement-card::after {
+        content: "";
+        position: absolute;
+        width: 170px;
+        height: 170px;
+        right: -72px;
+        top: -78px;
+        border-radius: 50%;
+        border: 28px solid rgba(249, 189, 28, 0.1);
+        pointer-events: none;
+      }
+
+      .engagement-card.partner-card::after {
+        border-color: rgba(155, 40, 32, 0.08);
+      }
+
+      .engagement-card > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      .engagement-card h2 {
+        font-size: clamp(1.9rem, 3vw, 2.8rem);
+        margin: 8px 0 12px;
+      }
+
+      .engagement-card > p {
+        color: var(--muted);
+        line-height: 1.7;
+        margin-bottom: 26px;
+        max-width: 580px;
+      }
+
+      .engagement-form {
+        display: grid;
+        gap: 17px;
+      }
+
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+
+      .form-group {
+        display: grid;
+        gap: 7px;
+      }
+
+      .form-group label {
+        font-size: 0.6875rem;
+        font-weight: 800;
+        letter-spacing: 0.05em;
+        color: var(--ink);
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        border: 1px solid rgba(33, 24, 22, 0.15);
+        border-radius: 9px;
+        background: #f9f5f2;
+        padding: 13px 14px;
+        font: inherit;
+        color: var(--ink);
+        font-size: 0.875rem;
+        outline: none;
+        transition:
+          border-color 0.2s ease,
+          box-shadow 0.2s ease,
+          background 0.2s ease;
+      }
+
+      .form-group textarea {
+        min-height: 145px;
+        resize: vertical;
+      }
+
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+        border-color: var(--red);
+        background: #fff;
+        box-shadow: 0 0 0 3px rgba(155, 40, 32, 0.08);
+      }
+
+      .engagement-form .btn {
+        justify-self: start;
+        border: 0;
+        min-width: 160px;
+      }
+
+      .form-note {
+        font-size: 0.6875rem;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      .why-section {
+        padding: 90px 0;
+        background: #fff;
+      }
+
+      .why-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 30px;
+        margin-bottom: 36px;
+      }
+
+      .why-heading h2 {
+        font-size: clamp(2.1rem, 4vw, 3.5rem);
+        line-height: 1.02;
+        margin: 10px 0 0;
+      }
+
+      .why-heading > p {
+        max-width: 420px;
+        color: var(--muted);
+        line-height: 1.7;
+        margin: 0;
+      }
+
+      .why-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+      }
+
+      .why-card {
+        min-height: 210px;
+        padding: 26px;
+        border-radius: 14px;
+        border: 1px solid var(--line);
+        background: #f9f5f2;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .why-card::after {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        right: -35px;
+        bottom: -38px;
+        border-radius: 50%;
+        background: rgba(155, 40, 32, 0.06);
+      }
+
+      .why-card:nth-child(2)::after {
+        background: rgba(249, 189, 28, 0.14);
+      }
+
+      .why-number {
+        font-size: 0.625rem;
+        font-weight: 800;
+        color: var(--red);
+        letter-spacing: 0.1em;
+      }
+
+      .why-card h3 {
+        font-size: 1.2rem;
+        margin: 28px 0 10px;
+        max-width: 230px;
+      }
+
+      .why-card p {
+        color: var(--muted);
+        font-size: 0.875rem;
+        line-height: 1.6;
+        max-width: 270px;
+      }
+
+      .involve-cta {
+        padding: 85px 0;
+        background: #f9f5f2;
+      }
+
+      .involve-cta .cta-box {
+        background: #cda29a;
+      }
+
+      @media (max-width: 900px) {
+        .involve-hero {
+          min-height: 610px;
+        }
+
+        .involve-intro,
+        .engagement-section,
+        .why-section,
+        .involve-cta {
+          padding: 70px 0;
+        }
+
+        .involve-intro-grid,
+        .engagement-grid {
+          grid-template-columns: 1fr;
+          gap: 35px;
+        }
+
+        .involve-intro-copy {
+          padding-left: 22px;
+        }
+
+        .why-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .why-heading {
+          display: block;
+        }
+
+        .why-heading > p {
+          margin-top: 18px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .involve-hero-content {
+          padding-bottom: 55px;
+        }
+
+        .involve-hero-content h1 {
+          font-size: clamp(2.7rem, 14vw, 4rem);
+        }
+
+        .engagement-card {
+          padding: 26px 20px;
+        }
+
+        .form-row {
+          grid-template-columns: 1fr;
+        }
+
+        .engagement-form .btn {
+          width: 100%;
+        }
+
+        .why-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a
+          aria-label="THAMANI home"
+          class="brand brand-logo-link"
+          href="index.html"
+          ><img
+            alt="THAMANI for Women and Youth Development Initiative"
+            class="brand-logo"
+            src="images/thamani-logo.png"
+        /></a>
+        <button
+          aria-expanded="false"
+          aria-label="Open navigation"
+          class="menu-toggle"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <nav aria-label="Main navigation" class="site-nav">
+          <a data-nav="home" href="index.html">Home</a>
+          <a data-nav="about" href="who-we-are.html">About Us</a>
+          <a data-nav="programmes" href="programmes-2.html">Programs</a
+          ><a data-nav="resources" href="resources.html">Resources</a>
+          <a data-nav="contact" href="contact.html">Contact</a>
+          <div class="nav-dropdown active" data-nav="involved">
+            <button
+              aria-expanded="false"
+              class="nav-dropdown-toggle"
+              type="button"
+            >
+              Get Involved
+              <span aria-hidden="true" class="dropdown-caret"></span>
+            </button>
+            <div class="nav-dropdown-menu">
+              <a href="volunteer.html#volunteer">Volunteer With Us</a>
+              <a href="volunteer.html#partner">Partner With Us</a
+              ><a href="careers.html">Careers &amp; Opportunities</a>
+              <a href="donate.html#support-work">Support Our Work</a>
+              <a href="donate.html#general-donation">Donate</a>
+            </div>
+          </div>
+        </nav>
+        <a class="nav-donate header-donate" href="donate.html">Donate</a>
+      </div>
+    </header>
+    <main>
+      <section class="involve-hero">
+        <div class="involve-hero-bg"></div>
+        <div class="container involve-hero-content reveal">
+          <p class="eyebrow" style="color: var(--yellow)">GET INVOLVED</p>
+          <h1>Bring your skills, ideas and networks to <em>the work.</em></h1>
+          <p>
+            Volunteer with THAMANI or explore a partnership that helps
+            strengthen women, young people and communities across Northern
+            Nigeria.
+          </p>
+        </div>
+      </section>
+      <section class="involve-intro">
+        <div class="container involve-intro-grid">
+          <div class="reveal">
+            <p class="eyebrow">WORK WITH THAMANI</p>
+            <h2>There is more than one way to <em>contribute.</em></h2>
+          </div>
+          <div class="involve-intro-copy reveal">
+            <p>
+              Individuals can volunteer their time, knowledge and skills, while
+              organizations, institutions and networks can explore partnerships
+              that support THAMANI's programmes and mission.
+            </p>
+            <p>
+              Use the relevant form below and your message will be prepared for
+              THAMANI's official email address.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="engagement-section">
+        <div class="container engagement-grid">
+          <article class="engagement-card reveal" id="volunteer">
+            <p class="eyebrow">VOLUNTEER WITH US</p>
+            <h2>Use your skills for <em>community impact.</em></h2>
+            <p>
+              Tell us about your background, interests and how you would like to
+              contribute to THAMANI's work.
+            </p>
+            <form class="engagement-form" id="volunteerForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="volunteerName">FULL NAME</label>
+                  <input id="volunteerName" required="" type="text" />
+                </div>
+                <div class="form-group">
+                  <label for="volunteerEmail">EMAIL ADDRESS</label>
+                  <input id="volunteerEmail" required="" type="email" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="volunteerPhone">PHONE NUMBER</label>
+                  <input id="volunteerPhone" type="tel" />
+                </div>
+                <div class="form-group">
+                  <label for="volunteerInterest">AREA OF INTEREST</label>
+                  <select id="volunteerInterest" required="">
+                    <option value="">Select an area</option>
+                    <option>Education</option>
+                    <option>Health &amp; WASH</option>
+                    <option>Women &amp; Youth Empowerment</option>
+                    <option>Peace &amp; Governance</option>
+                    <option>Climate Action</option>
+                    <option>Communications / Media</option>
+                    <option>Research / Advocacy</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="volunteerSkills">SKILLS / EXPERIENCE</label>
+                <textarea id="volunteerSkills" required=""></textarea>
+              </div>
+              <div class="form-group">
+                <label for="volunteerMessage"
+                  >WHY WOULD YOU LIKE TO VOLUNTEER?</label
+                >
+                <textarea id="volunteerMessage" required=""></textarea>
+              </div>
+              <button class="btn btn-primary" type="submit">
+                Submit Volunteer Interest <span>↗</span>
+              </button>
+              <p class="form-note">
+                Submitting this form opens your email application with the
+                details prepared.
+              </p>
+            </form>
+          </article>
+          <article class="engagement-card partner-card reveal" id="partner">
+            <p class="eyebrow">PARTNER WITH US</p>
+            <h2>Build something meaningful <em>together.</em></h2>
+            <p>
+              Organizations and institutions can use this form to start a
+              conversation about collaboration, programme support or joint
+              initiatives.
+            </p>
+            <form class="engagement-form" id="partnerForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="partnerName">CONTACT PERSON</label>
+                  <input id="partnerName" required="" type="text" />
+                </div>
+                <div class="form-group">
+                  <label for="partnerEmail">EMAIL ADDRESS</label>
+                  <input id="partnerEmail" required="" type="email" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="partnerOrg">ORGANIZATION</label>
+                  <input id="partnerOrg" required="" type="text" />
+                </div>
+                <div class="form-group">
+                  <label for="partnerType">PARTNERSHIP INTEREST</label>
+                  <select id="partnerType" required="">
+                    <option value="">Select an option</option>
+                    <option>Programme Partnership</option>
+                    <option>Funding / Grant Collaboration</option>
+                    <option>Research &amp; Advocacy</option>
+                    <option>Community Engagement</option>
+                    <option>Training / Capacity Building</option>
+                    <option>Media / Communications</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="partnerSubject">SUBJECT</label>
+                <input id="partnerSubject" required="" type="text" />
+              </div>
+              <div class="form-group">
+                <label for="partnerMessage">MESSAGE</label>
+                <textarea id="partnerMessage" required=""></textarea>
+              </div>
+              <button class="btn btn-dark" type="submit">
+                Send Partnership Message <span>↗</span>
+              </button>
+              <p class="form-note">
+                Your message will be prepared for THAMANI's official email
+                address.
+              </p>
+            </form>
+          </article>
+        </div>
+      </section>
+      <section class="why-section">
+        <div class="container">
+          <div class="why-heading reveal">
+            <div>
+              <p class="eyebrow">WHY GET INVOLVED</p>
+              <h2>Contribute to work that is <em>community-led.</em></h2>
+            </div>
+            <p>
+              THAMANI works through collaboration, capacity strengthening and
+              community engagement to create sustainable change.
+            </p>
+          </div>
+          <div class="why-grid">
+            <article class="why-card reveal">
+              <span class="why-number">01</span>
+              <h3>Share Your Skills</h3>
+              <p>
+                Contribute knowledge, time and experience to meaningful
+                community-focused initiatives.
+              </p>
+            </article>
+            <article class="why-card reveal">
+              <span class="why-number">02</span>
+              <h3>Build Partnerships</h3>
+              <p>
+                Collaborate on programmes, advocacy, training, research and
+                other shared priorities.
+              </p>
+            </article>
+            <article class="why-card reveal">
+              <span class="why-number">03</span>
+              <h3>Support Lasting Change</h3>
+              <p>
+                Help strengthen opportunities for women, young people and
+                resilient communities.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="involve-cta">
+        <div class="container">
+          <div class="cta-box reveal">
+            <div>
+              <p class="eyebrow">OTHER WAYS TO SUPPORT</p>
+              <h2>Prefer to support our work <em>financially?</em></h2>
+              <p>
+                You can contribute to a specific focus area or make a general
+                donation.
+              </p>
+            </div>
+            <div class="cta-actions">
+              <a class="btn btn-dark" href="donate.html"
+                >View Donation Options</a
+              >
+              <a class="btn btn-primary" href="contact.html">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer" id="contact-footer">
+      <div class="container footer-top">
+        <div class="footer-brand">
+          <a class="brand brand-light brand-logo-link" href="index.html"
+            ><img
+              alt="THAMANI for Women and Youth Development Initiative"
+              class="brand-logo"
+              src="images/thamani-logo.png"
+          /></a>
+          <p>
+            Empowering Women and Youth.<br />Building Resilient Communities.
+          </p>
+          <a class="footer-email" href="mailto:thamaniinitiative5@gmail.com"
+            >thamaniinitiative5@gmail.com</a
+          >
+        </div>
+        <div class="footer-links">
+          <div>
+            <h4>Explore</h4>
+            <a href="who-we-are.html">About Us</a>
+            <a href="index.html#focus">What We Do</a>
+            <a href="index.html#impact">Our Impact</a>
+            <a href="programmes-2.html">Programs</a
+            ><a href="resources.html">Resources</a>
+          </div>
+          <div>
+            <h4>Get Involved</h4>
+            <a href="volunteer.html#volunteer">Volunteer With Us</a>
+            <a href="volunteer.html#partner">Partner With Us</a
+            ><a href="careers.html">Careers &amp; Opportunities</a>
+            <a href="donate.html#support-work">Support Our Work</a>
+            <a href="donate.html#general-donation">Donate</a>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <a href="tel:08137076501">+234 813 707 6501</a>
+            <a href="tel:+2347034912246">+234 703 491 2246</a>
+            <span
+              >Behind Bazma Plaza,<br />Yelwa Makaranta,<br />Bauchi State,
+              Nigeria.</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span
+          >© <span id="year"></span> THAMANI for Women and Youth Development
+          Initiative.</span
+        >
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+      const emailAddress = "thamaniinitiative5@gmail.com";
+
+      const volunteerForm = document.querySelector("#volunteerForm");
+
+      volunteerForm?.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const name = document.querySelector("#volunteerName").value.trim();
+        const email = document.querySelector("#volunteerEmail").value.trim();
+        const phone = document.querySelector("#volunteerPhone").value.trim();
+        const interest = document.querySelector("#volunteerInterest").value;
+        const skills = document.querySelector("#volunteerSkills").value.trim();
+        const message = document
+          .querySelector("#volunteerMessage")
+          .value.trim();
+
+        const subject = encodeURIComponent(`Volunteer Interest — ${name}`);
+
+        const body = encodeURIComponent(
+          `VOLUNTEER APPLICATION
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone || "Not provided"}
+Area of Interest: ${interest}
+
+Skills / Experience:
+${skills}
+
+Why I would like to volunteer:
+${message}`,
+        );
+
+        window.location.href = `mailto:${emailAddress}?subject=${subject}&body=${body}`;
+      });
+
+      const partnerForm = document.querySelector("#partnerForm");
+
+      partnerForm?.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const name = document.querySelector("#partnerName").value.trim();
+        const email = document.querySelector("#partnerEmail").value.trim();
+        const organization = document.querySelector("#partnerOrg").value.trim();
+        const type = document.querySelector("#partnerType").value;
+        const subjectText = document
+          .querySelector("#partnerSubject")
+          .value.trim();
+        const message = document.querySelector("#partnerMessage").value.trim();
+
+        const subject = encodeURIComponent(
+          `Partnership Enquiry — ${organization}: ${subjectText}`,
+        );
+
+        const body = encodeURIComponent(
+          `PARTNERSHIP ENQUIRY
+
+Contact Person: ${name}
+Email: ${email}
+Organization: ${organization}
+Partnership Interest: ${type}
+
+Subject:
+${subjectText}
+
+Message:
+${message}`,
+        );
+
+        window.location.href = `mailto:${emailAddress}?subject=${subject}&body=${body}`;
+      });
+    </script>
+  </body>
+</html>

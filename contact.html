@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact | THAMANI</title>
+<meta content="Contact THAMANI for Women and Youth Development Initiative in Bauchi State, Nigeria." name="description"/>
+<link href="style.css" rel="stylesheet"/>
+<style>
+.contact-hero{min-height:62svh;position:relative;display:grid;align-items:end;overflow:hidden;background:#211816;color:#fff}
+.contact-hero-bg{position:absolute;inset:0;background:linear-gradient(90deg,rgba(25,14,12,.88),rgba(25,14,12,.58) 52%,rgba(25,14,12,.18)),url("images/ContactHero.webp") center/cover no-repeat}
+.contact-hero-content{position:relative;z-index:1;padding:115px 0 70px}
+.contact-hero-content h1{max-width:820px;font-size:clamp(3rem,6vw,5.8rem);line-height:.95;letter-spacing:-.06em;margin:10px 0 20px}
+.contact-hero-content h1 em{color:var(--yellow);font-style:normal}
+.contact-hero-content>p:last-child{max-width:560px;color:rgba(255,255,255,.82);line-height:1.7;font-size: 1rem;}
+.contact-main{padding:95px 0;background:#F9F5F2}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:start}
+.contact-info{position:sticky;top:110px}
+.contact-info h2{font-size:clamp(2.1rem,4vw,3.6rem);line-height:1;margin:10px 0 18px;max-width:520px}
+.contact-info>p{max-width:500px;color:var(--muted);line-height:1.75;margin-bottom:30px}
+.contact-details{display:grid;gap:12px}
+.contact-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;display:grid;grid-template-columns:42px 1fr;gap:15px;align-items:start;transition:.25s}
+.contact-card:hover{transform:translateY(-4px);border-color:rgba(155,40,32,.2);box-shadow:0 16px 35px rgba(33,24,22,.08)}
+.contact-icon{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--yellow);color:var(--ink);font-weight:800;font-size:.85rem}
+.contact-card h3{font-size:.9rem;margin:0 0 5px}
+.contact-card a,.contact-card p{color:var(--muted);font-size: .875rem;line-height:1.6;margin:0}
+.contact-card a:hover{color:var(--red)}
+.contact-form-wrap{background:#fff;border:1px solid var(--line);border-radius:18px;padding:38px;box-shadow:0 18px 45px rgba(33,24,22,.07)}
+.contact-form-wrap h2{font-size:clamp(1.8rem,3vw,2.8rem);margin:8px 0 10px}
+.contact-form-wrap>p{color:var(--muted);margin-bottom:28px;line-height:1.7}
+.contact-form{display:grid;gap:18px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group{display:grid;gap:7px}
+.form-group label{font-size: .6875rem;font-weight:800;color:var(--ink);letter-spacing:.04em}
+.form-group input,.form-group select,.form-group textarea{width:100%;border:1px solid rgba(33,24,22,.15);border-radius:9px;background:#F9F5F2;padding:13px 14px;font:inherit;font-size: .875rem;color:var(--ink);outline:none;transition:.2s}
+.form-group textarea{min-height:150px;resize:vertical}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--red);background:#fff;box-shadow:0 0 0 3px rgba(155,40,32,.08)}
+.contact-form .btn{justify-self:start;min-width:150px;border:0}
+.form-note{font-size: .6875rem;color:var(--muted);line-height:1.5}
+.contact-support{padding:85px 0;background:#fff}
+.contact-support-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:55px;align-items:center}
+.contact-support h2{font-size:clamp(2rem,4vw,3.4rem);line-height:1.03;margin:10px 0 18px}
+.contact-support p{color:var(--muted);line-height:1.7;max-width:620px}
+.support-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}
+.contact-map{padding:0 0 90px;background:#fff}
+.map-placeholder{min-height:340px;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(rgba(155,40,32,.08),rgba(155,40,32,.08)),#CDA29A;display:grid;place-items:center;text-align:center;padding:30px}
+.map-placeholder div{max-width:520px}.map-placeholder h3{font-size:1.5rem;margin-bottom:8px}.map-placeholder p{color:rgba(33,24,22,.72);margin-bottom:18px}
+@media(max-width:850px){.contact-hero{min-height:600px}.contact-main,.contact-support{padding:70px 0}.contact-grid,.contact-support-grid{grid-template-columns:1fr;gap:38px}.contact-info{position:static}.support-actions{justify-content:flex-start}}
+@media(max-width:600px){.contact-hero-content{padding-bottom:55px}.contact-hero-content h1{font-size:clamp(2.7rem,14vw,4rem)}.contact-form-wrap{padding:26px 20px}.form-row{grid-template-columns:1fr}.contact-card{grid-template-columns:38px 1fr;padding:18px}.contact-icon{width:38px;height:38px}.contact-form .btn{width:100%}.support-actions{flex-direction:column}.support-actions .btn{width:100%}.map-placeholder{min-height:280px}}
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="container nav-wrap">
+<a aria-label="THAMANI home" class="brand brand-logo-link" href="index.html"><img alt="THAMANI for Women and Youth Development Initiative" class="brand-logo" src="images/thamani-logo.png"/></a>
+<button aria-expanded="false" aria-label="Open navigation" class="menu-toggle">
+<span></span><span></span><span></span>
+</button>
+<nav aria-label="Main navigation" class="site-nav">
+<a data-nav="home" href="index.html">Home</a>
+<a data-nav="about" href="who-we-are.html">About Us</a>
+<a data-nav="programmes" href="programmes-2.html">Programs</a><a data-nav="resources" href="resources.html">Resources</a>
+<a class="active" data-nav="contact" href="contact.html">Contact</a>
+<div class="nav-dropdown" data-nav="involved">
+<button aria-expanded="false" class="nav-dropdown-toggle" type="button">
+          Get Involved <span aria-hidden="true" class="dropdown-caret"></span>
+</button>
+<div class="nav-dropdown-menu">
+<a href="volunteer.html#volunteer">Volunteer With Us</a>
+<a href="volunteer.html#partner">Partner With Us</a><a href="careers.html">Careers &amp; Opportunities</a>
+<a href="donate.html#support-work">Support Our Work</a>
+<a href="donate.html#general-donation">Donate</a>
+</div>
+</div>
+</nav>
+<a class="nav-donate header-donate" href="donate.html">Donate</a>
+</div>
+</header>
+<main>
+<section class="contact-hero">
+<div class="contact-hero-bg"></div>
+<div class="container contact-hero-content reveal">
+<p class="eyebrow" style="color:var(--yellow)">CONTACT US</p>
+<h1>Let’s build stronger communities <em>together.</em></h1>
+<p>Whether you want to partner with us, volunteer, support our work or learn more about our programmes, we’d love to hear from you.</p>
+</div>
+</section>
+<section class="contact-main">
+<div class="container contact-grid">
+<div class="contact-info reveal">
+<p class="eyebrow">GET IN TOUCH</p>
+<h2>Start a conversation with <em>THAMANI.</em></h2>
+<p>Reach out using the contact details below or send us a message through the form.</p>
+<div class="contact-details">
+<article class="contact-card"><div class="contact-icon">@</div><div><h3>Email</h3><a href="mailto:thamaniinitiative5@gmail.com">thamaniinitiative5@gmail.com</a></div></article>
+<article class="contact-card"><div class="contact-icon">☎</div><div><h3>Phone</h3><a href="tel:08137076501">08137076501</a><br/><a href="tel:+2347034912246">+234 703 491 2246</a></div></article>
+<article class="contact-card"><div class="contact-icon">⌂</div><div><h3>Office</h3><p>Behind Bazma Plaza, Yelwa Makaranta, Bauchi State, Nigeria.</p></div></article>
+</div>
+</div>
+<div class="contact-form-wrap reveal">
+<p class="eyebrow">SEND A MESSAGE</p>
+<h2>How can we help?</h2>
+<p>Tell us a little about yourself and what you would like to discuss.</p>
+<form class="contact-form" id="contactForm">
+<div class="form-row">
+<div class="form-group"><label for="name">FULL NAME</label><input id="name" required="" type="text"/></div>
+<div class="form-group"><label for="email">EMAIL ADDRESS</label><input id="email" required="" type="email"/></div>
+</div>
+<div class="form-row">
+<div class="form-group"><label for="organization">ORGANIZATION</label><input id="organization" placeholder="Optional" type="text"/></div>
+<div class="form-group"><label for="subject">I'M INTERESTED IN</label><select id="subject" required=""><option value="">Select an option</option><option>Partnering with THAMANI</option><option>Volunteering</option><option>Supporting a programme</option><option>General donation</option><option>Programmes &amp; projects</option><option>Media / information request</option><option>Other</option></select></div>
+</div>
+<div class="form-group"><label for="message">MESSAGE</label><textarea id="message" required=""></textarea></div>
+<button class="btn btn-primary" type="submit">Send Message <span>↗</span></button>
+<p class="form-note">This form currently opens your email application with the message prepared. A direct form service or backend can be connected later.</p>
+</form>
+</div>
+</div>
+</section>
+<section class="contact-support">
+<div class="container contact-support-grid">
+<div class="reveal"><p class="eyebrow">WORK WITH US</p><h2>There are different ways to <em>get involved.</em></h2><p>Volunteer your skills, partner with THAMANI, support a programme or contribute to our broader work.</p></div>
+<div class="support-actions reveal"><a class="btn btn-dark" href="volunteer.html">Get Involved</a><a class="btn btn-outline" href="programmes-2.html">Explore Programmes</a></div>
+</div>
+</section>
+<section class="contact-map">
+<div class="container">
+<div class="map-placeholder reveal">
+<div><p class="eyebrow">OUR OFFICE</p><h3>Bauchi State, Nigeria</h3><p>Behind Bazma Plaza, Yelwa Makaranta, Bauchi State.</p><a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=Yelwa+Makaranta+Bauchi+Nigeria" rel="noopener" target="_blank">Open in Maps ↗</a></div>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer" id="contact-footer">
+<div class="container footer-top">
+<div class="footer-brand">
+<a class="brand brand-light brand-logo-link" href="index.html"><img alt="THAMANI for Women and Youth Development Initiative" class="brand-logo" src="images/thamani-logo.png"/></a>
+<p>Empowering Women and Youth.<br/>Building Resilient Communities.</p>
+<a class="footer-email" href="mailto:thamaniinitiative5@gmail.com">thamaniinitiative5@gmail.com</a>
+</div>
+<div class="footer-links">
+<div>
+<h4>Explore</h4>
+<a href="who-we-are.html">About Us</a>
+<a href="index.html#focus">What We Do</a>
+<a href="index.html#impact">Our Impact</a>
+<a href="programmes-2.html">Programs</a><a href="resources.html">Resources</a>
+</div>
+<div>
+<h4>Get Involved</h4>
+<a href="volunteer.html#volunteer">Volunteer With Us</a>
+<a href="volunteer.html#partner">Partner With Us</a><a href="careers.html">Careers &amp; Opportunities</a>
+<a href="donate.html#support-work">Support Our Work</a>
+<a href="donate.html#general-donation">Donate</a>
+</div>
+<div>
+<h4>Contact</h4>
+<a href="tel:08137076501">+234 813 707 6501</a>
+<a href="tel:+2347034912246">+234 703 491 2246</a>
+<span>Behind Bazma Plaza,<br/>Yelwa Makaranta,<br/>Bauchi State, Nigeria.</span>
+</div>
+</div>
+</div>
+<div class="container footer-bottom">
+<span>© <span id="year"></span> THAMANI for Women and Youth Development Initiative.</span>
+</div>
+</footer>
+<script src="script.js"></script>
+<script>
+const contactForm=document.querySelector("#contactForm");
+contactForm?.addEventListener("submit",(event)=>{
+event.preventDefault();
+const name=document.querySelector("#name").value.trim();
+const email=document.querySelector("#email").value.trim();
+const organization=document.querySelector("#organization").value.trim();
+const subject=document.querySelector("#subject").value;
+const message=document.querySelector("#message").value.trim();
+const mailSubject=encodeURIComponent(subject?`${subject} — Website enquiry from ${name}`:`Website enquiry from ${name}`);
+const mailBody=encodeURIComponent(`Name: ${name}
+Email: ${email}
+Organization: ${organization||"Not provided"}
+Interest: ${subject}
+
+Message:
+${message}`);
+window.location.href=`mailto:thamaniinitiative5@gmail.com?subject=${mailSubject}&body=${mailBody}`;
+});
+</script>
+</body>
+</html>

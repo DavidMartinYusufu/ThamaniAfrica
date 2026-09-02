@@ -1,0 +1,1072 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Who We Are | THAMANI</title>
+    <meta
+      content="Learn about THAMANI for Women and Youth Development Initiative, our vision, mission, story and core values."
+      name="description"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <style>
+      /* ================================
+       WHO WE ARE PAGE
+       ================================ */
+
+      .about-hero {
+        min-height: 72svh;
+        display: grid;
+        align-items: end;
+        position: relative;
+        overflow: hidden;
+        background: #211816;
+      }
+
+      .about-hero .lead {
+        color: #f9bd1c;
+      }
+
+      .about-hero-image {
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(
+            90deg,
+            rgba(25, 14, 12, 0.84),
+            rgba(25, 14, 12, 0.42) 55%,
+            rgba(25, 14, 12, 0.12)
+          ),
+          url("images/abouthero.webp") center/cover no-repeat;
+      }
+
+      .about-hero-content {
+        position: relative;
+        z-index: 1;
+        padding: 110px 0 75px;
+        color: #fff;
+      }
+
+      .about-hero-content h1 {
+        max-width: 760px;
+        font-size: clamp(2.8rem, 6vw, 5.8rem);
+        line-height: 0.96;
+        margin: 12px 0 22px;
+        letter-spacing: -0.06em;
+      }
+
+      .about-hero-content p:last-child {
+        max-width: 600px;
+        color: rgba(255, 255, 255, 0.84);
+        line-height: 1.7;
+        font-size: 1rem;
+      }
+
+      .about-intro,
+      .story-page {
+        padding: 95px 0;
+      }
+
+      .about-intro-grid,
+      .story-page-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 65px;
+        align-items: center;
+      }
+
+      .about-intro-image,
+      .story-page-image {
+        min-height: 500px;
+        border-radius: var(--radius);
+        overflow: hidden;
+      }
+
+      .about-intro-image img,
+      .story-page-image img {
+        width: 100%;
+        height: 100%;
+        min-height: 500px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .about-intro-copy,
+      .story-page-copy {
+        max-width: 580px;
+      }
+
+      .about-intro-copy h2,
+      .story-page-copy h2 {
+        font-size: clamp(2rem, 4vw, 3.4rem);
+        line-height: 1.04;
+        margin: 10px 0 22px;
+      }
+
+      .about-intro-copy p,
+      .story-page-copy p {
+        line-height: 1.75;
+        color: var(--muted);
+      }
+
+      .vision-mission {
+        background: var(--cream);
+        padding: 90px 0;
+      }
+
+      .vm-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .vm-card {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 38px;
+        min-height: 270px;
+        position: relative;
+        overflow: hidden;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .vm-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 18px 35px rgba(33, 24, 22, 0.08);
+      }
+
+      .vm-card::after {
+        content: "";
+        position: absolute;
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        right: -55px;
+        bottom: -65px;
+        background: rgba(249, 189, 28, 0.13);
+      }
+
+      .vm-card:nth-child(2)::after {
+        background: rgba(155, 40, 32, 0.07);
+      }
+
+      .vm-number {
+        font-size: 0.625rem;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        color: var(--red);
+      }
+
+      .vm-card h3 {
+        font-size: 1.45rem;
+        line-height: 1.25;
+        margin: 34px 0 0;
+        max-width: 560px;
+      }
+
+      .values-section {
+        background: var(--dark);
+        color: #fff;
+        padding: 95px 0;
+      }
+
+      .values-heading {
+        max-width: 640px;
+        margin-bottom: 45px;
+      }
+
+      .values-heading h2 {
+        font-size: clamp(2rem, 4vw, 3.5rem);
+        line-height: 1.02;
+        margin: 10px 0 15px;
+      }
+
+      .values-heading p {
+        color: rgba(255, 255, 255, 0.68);
+        line-height: 1.7;
+      }
+
+      .values-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: rgba(255, 255, 255, 0.13);
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        border-radius: var(--radius);
+        overflow: hidden;
+      }
+
+      .value-card {
+        background: #211816;
+        padding: 28px;
+        min-height: 190px;
+      }
+
+      .value-index {
+        color: var(--yellow);
+        font-size: 0.625rem;
+        font-weight: 800;
+        letter-spacing: 0.15em;
+      }
+
+      .value-card h3 {
+        margin: 28px 0 10px;
+        font-size: 1.12rem;
+      }
+
+      .value-card p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.62);
+        font-size: 0.875rem;
+        line-height: 1.6;
+      }
+
+      .about-cta {
+        padding: 85px 0;
+      }
+
+      .site-nav a.active {
+        color: var(--red);
+      }
+
+      .eyebrow-light {
+        color: var(--yellow);
+      }
+
+      @media (max-width: 800px) {
+        .about-hero {
+          min-height: 620px;
+        }
+
+        .about-hero-content {
+          padding: 100px 0 55px;
+        }
+
+        .about-intro,
+        .story-page,
+        .vision-mission,
+        .values-section {
+          padding: 70px 0;
+        }
+
+        .about-intro-grid,
+        .story-page-grid,
+        .vm-grid {
+          grid-template-columns: 1fr;
+          gap: 34px;
+        }
+
+        .about-intro-image,
+        .about-intro-image img,
+        .story-page-image,
+        .story-page-image img {
+          min-height: 360px;
+        }
+
+        .values-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .about-hero-content h1 {
+          font-size: clamp(2.55rem, 14vw, 4rem);
+        }
+
+        .values-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .value-card {
+          min-height: auto;
+        }
+
+        .vm-card {
+          padding: 28px;
+        }
+      }
+
+      /* WHO WE ARE — REFINEMENT */
+      .about-hero {
+        min-height: 76svh;
+      }
+      .about-hero-image {
+        background:
+          linear-gradient(
+            90deg,
+            rgba(25, 14, 12, 0.88),
+            rgba(25, 14, 12, 0.55) 48%,
+            rgba(25, 14, 12, 0.18)
+          ),
+          url("images/abouthero.webp") center/cover no-repeat;
+      }
+      .about-hero-content {
+        padding-bottom: 82px;
+      }
+      .about-intro,
+      .story-page {
+        padding: 105px 0;
+      }
+      .about-intro-image,
+      .story-page-image {
+        position: relative;
+        box-shadow: 0 20px 55px rgba(33, 24, 22, 0.09);
+      }
+      .about-intro-image:after,
+      .story-page-image:after {
+        position: absolute;
+        left: 20px;
+        bottom: 18px;
+        padding: 7px 10px;
+        background: rgba(33, 24, 22, 0.72);
+        color: #fff;
+        font-size: 0.625rem;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        border-radius: 4px;
+      }
+      .about-intro-image:after {
+        content: "THAMANI / COMMUNITY";
+      }
+      .story-page-image:after {
+        content: "THAMANI / OUR STORY";
+      }
+      /* .about-intro-copy:before,
+      .story-page-copy:before {
+        content: "";
+        display: block;
+        width: 62px;
+        height: 4px;
+        margin-bottom: 22px;
+        background: var(--yellow);
+      } */
+      .vision-mission {
+        padding: 100px 0;
+      }
+      .vm-card {
+        min-height: 300px;
+        padding: 40px;
+        background:
+          linear-gradient(
+            135deg,
+            rgba(249, 189, 28, 0.055),
+            rgba(255, 255, 255, 0.98) 45%
+          ),
+          #fff;
+      }
+      .vm-card:nth-child(2) {
+        background:
+          linear-gradient(
+            135deg,
+            rgba(155, 40, 32, 0.055),
+            rgba(255, 255, 255, 0.98) 45%
+          ),
+          #fff;
+      }
+      /* .vm-card:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: var(--yellow);
+      } */
+      .vm-card:nth-child(2):before {
+        background: var(--red);
+      }
+      .vm-card h3 {
+        font-size: clamp(1.45rem, 2.2vw, 2rem);
+      }
+
+      /* Core values: richer cards */
+      .values-section {
+        position: relative;
+        overflow: hidden;
+        background:
+          radial-gradient(
+            circle at 10% 15%,
+            rgba(249, 189, 28, 0.08),
+            transparent 28%
+          ),
+          radial-gradient(
+            circle at 90% 80%,
+            rgba(155, 40, 32, 0.18),
+            transparent 30%
+          ),
+          #211816;
+      }
+      .values-section:before {
+        content: "VALUES";
+        position: absolute;
+        right: -20px;
+        top: 30px;
+        font-family: "Manrope", sans-serif;
+        font-size: clamp(7rem, 17vw, 15rem);
+        line-height: 0.8;
+        font-weight: 800;
+        letter-spacing: -0.08em;
+        color: rgba(255, 255, 255, 0.025);
+        pointer-events: none;
+      }
+      .values-heading,
+      .values-grid {
+        position: relative;
+        z-index: 1;
+      }
+      .values-grid {
+        background: transparent;
+        border: 0;
+        gap: 14px;
+        overflow: visible;
+      }
+      .value-card {
+        min-height: 220px;
+        border: 1px solid rgba(255, 255, 255, 0.09);
+        border-radius: 14px;
+        background:
+          linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.065),
+            rgba(255, 255, 255, 0.018)
+          ),
+          #2a201d;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+        position: relative;
+        overflow: hidden;
+        transition:
+          transform 0.3s ease,
+          border-color 0.3s ease,
+          background 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      /* .value-card:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: var(--yellow);
+        transform: scaleY(0.35);
+        transform-origin: top;
+        transition: transform 0.3s ease;
+      } */
+      .value-card:nth-child(even):before {
+        background: var(--red);
+      }
+      .value-card:after {
+        content: "";
+        position: absolute;
+        width: 115px;
+        height: 115px;
+        right: -48px;
+        bottom: -48px;
+        border-radius: 50%;
+        border: 20px solid rgba(249, 189, 28, 0.06);
+        transition: transform 0.35s ease;
+      }
+      .value-card:nth-child(even):after {
+        border-color: rgba(155, 40, 32, 0.12);
+      }
+      .value-card:hover {
+        transform: translateY(-7px);
+        border-color: rgba(249, 189, 28, 0.35);
+        background:
+          linear-gradient(
+            145deg,
+            rgba(249, 189, 28, 0.09),
+            rgba(255, 255, 255, 0.025)
+          ),
+          #302421;
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+      }
+      .value-card:nth-child(even):hover {
+        border-color: rgba(155, 40, 32, 0.4);
+        background:
+          linear-gradient(
+            145deg,
+            rgba(155, 40, 32, 0.11),
+            rgba(255, 255, 255, 0.025)
+          ),
+          #302421;
+      }
+      .value-card:hover:before {
+        transform: scaleY(1);
+      }
+      .value-card:hover:after {
+        transform: scale(1.15);
+      }
+      .value-index {
+        display: inline-flex;
+        width: 34px;
+        height: 34px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(249, 189, 28, 0.45);
+        border-radius: 50%;
+        color: var(--yellow);
+        letter-spacing: 0.03em;
+      }
+      .value-card:nth-child(even) .value-index {
+        border-color: rgba(155, 40, 32, 0.6);
+        color: #e8756b;
+      }
+      .value-card h3 {
+        max-width: 220px;
+        font-size: 1.2rem;
+        line-height: 1.25;
+      }
+      .value-card p {
+        max-width: 250px;
+      }
+
+      /* Footer */
+      .site-footer {
+        background: #9b2820;
+        color: #fff;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      .footer-main {
+        display: grid;
+        grid-template-columns: 1.7fr 0.8fr 0.8fr 1.1fr;
+        gap: 45px;
+        padding-top: 65px;
+        padding-bottom: 55px;
+      }
+      .footer-brand {
+        max-width: 360px;
+      }
+      .footer-brand .brand {
+        display: inline-flex;
+        margin-bottom: 18px;
+      }
+      .footer-brand > p {
+        color: rgba(255, 255, 255, 0.58);
+        line-height: 1.7;
+        font-size: 0.875rem;
+        margin: 0 0 10px;
+      }
+      .footer-column {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 11px;
+      }
+      .footer-title {
+        color: var(--yellow) !important;
+        font-size: 0.6875rem !important;
+        font-weight: 800;
+        letter-spacing: 0.13em;
+        margin: 0 0 7px;
+      }
+      .footer-column a,
+      .footer-column span {
+        color: rgba(255, 255, 255, 0.58);
+        font-size: 0.8125rem;
+        line-height: 1.5;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+      .footer-column a:hover {
+        color: #fff;
+      }
+      .site-footer .footer-bottom {
+        padding-top: 28px;
+        padding-bottom: 28px;
+      }
+      .site-footer .footer-bottom p {
+        color: rgba(255, 255, 255, 0.58);
+      }
+
+      @media (max-width: 800px) {
+        .about-hero {
+          min-height: 650px;
+        }
+        .about-intro,
+        .story-page,
+        .vision-mission,
+        .values-section {
+          padding: 75px 0;
+        }
+        .values-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 10px;
+        }
+        .value-card {
+          min-height: 205px;
+          padding: 24px;
+        }
+        .footer-main {
+          grid-template-columns: 1fr 1fr;
+          gap: 38px 25px;
+        }
+        .footer-brand {
+          grid-column: 1/-1;
+        }
+      }
+      @media (max-width: 560px) {
+        .values-grid {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+        .value-card {
+          min-height: 185px;
+        }
+        .footer-main {
+          grid-template-columns: 1fr;
+          gap: 30px;
+          padding-top: 50px;
+          padding-bottom: 42px;
+        }
+        .footer-brand {
+          grid-column: auto;
+        }
+        .values-section:before {
+          font-size: 6rem;
+        }
+      }
+    </style>
+    <style>
+      /* Core Values — warm/light brand treatment */
+      .values-section {
+        position: relative;
+        overflow: hidden;
+        background: #f9f5f2;
+        color: #211816;
+      }
+      .values-section::before {
+        color: rgba(155, 40, 32, 0.035);
+      }
+      .values-heading,
+      .values-grid {
+        position: relative;
+        z-index: 1;
+      }
+      .values-heading p:not(.eyebrow) {
+        color: var(--muted);
+      }
+      .values-heading h2 {
+        color: #211816;
+      }
+      .values-grid {
+        background: transparent;
+        border: 0;
+        gap: 16px;
+        overflow: visible;
+      }
+      .value-card {
+        min-height: 220px;
+        border: 1px solid rgba(126, 79, 81, 0.22);
+        border-radius: 14px;
+        /* background:
+          linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.3),
+            rgba(255, 255, 255, 0.04)
+          ),
+          #7e4f51; */
+        background: #9b2820;
+        box-shadow: 0 12px 28px rgba(126, 79, 81, 0.13);
+        position: relative;
+        overflow: hidden;
+        /* transition:
+          transform 0.3s ease,
+          border-color 0.3s ease,
+          background 0.3s ease,
+          box-shadow 0.3s ease; */
+      }
+      /* .value-card::before {
+        background: #f9bd1c;
+      }
+      .value-card:nth-child(even)::before {
+        background: #9b2820;
+      }
+      .value-card::after {
+        width: 125px;
+        height: 125px;
+        right: -48px;
+        bottom: -55px;
+        border: 22px solid rgba(249, 189, 28, 0.12);
+      }
+      .value-card:nth-child(even)::after {
+        border-color: rgba(249, 189, 28, 0.12);
+      } */
+      .value-card:hover {
+        transform: translateY(-7px);
+        border-color: rgba(249, 189, 28, 0.7);
+        background:
+          linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.38),
+            rgba(249, 189, 28, 0.08)
+          ),
+          #8a595b;
+        box-shadow: 0 18px 38px rgba(126, 79, 81, 0.2);
+      }
+      .value-card:nth-child(even):hover {
+        border-color: rgba(249, 189, 28, 0.7);
+        background:
+          linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.38),
+            rgba(155, 40, 32, 0.08)
+          ),
+          #8a595b;
+      }
+      .value-card h3 {
+        color: #fff;
+      }
+      .value-card p {
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .value-index {
+        border-color: rgba(249, 189, 28, 0.7);
+        color: #f9bd1c;
+      }
+      .value-card:nth-child(even) .value-index {
+        border-color: rgba(249, 189, 28, 0.7);
+        color: #f9bd1c;
+      }
+      .values-section .eyebrow {
+        color: #9b2820;
+      }
+      @media (max-width: 560px) {
+        .value-card {
+          min-height: 185px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a
+          aria-label="THAMANI home"
+          class="brand brand-logo-link"
+          href="index.html"
+          ><img
+            alt="THAMANI for Women and Youth Development Initiative"
+            class="brand-logo"
+            src="images/thamani-logo.png"
+        /></a>
+        <button
+          aria-expanded="false"
+          aria-label="Open navigation"
+          class="menu-toggle"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <nav aria-label="Main navigation" class="site-nav">
+          <a data-nav="home" href="index.html">Home</a>
+          <a class="active" data-nav="about" href="who-we-are.html">About Us</a>
+          <a data-nav="programmes" href="programmes-2.html">Programs</a
+          ><a data-nav="resources" href="resources.html">Resources</a>
+          <a data-nav="contact" href="contact.html">Contact</a>
+          <div class="nav-dropdown" data-nav="involved">
+            <button
+              aria-expanded="false"
+              class="nav-dropdown-toggle"
+              type="button"
+            >
+              Get Involved
+              <span aria-hidden="true" class="dropdown-caret"></span>
+            </button>
+            <div class="nav-dropdown-menu">
+              <a href="volunteer.html#volunteer">Volunteer With Us</a>
+              <a href="volunteer.html#partner">Partner With Us</a
+              ><a href="careers.html">Careers &amp; Opportunities</a>
+              <a href="donate.html#support-work">Support Our Work</a>
+              <a href="donate.html#general-donation">Donate</a>
+            </div>
+          </div>
+        </nav>
+        <a class="nav-donate header-donate" href="donate.html">Donate</a>
+      </div>
+    </header>
+    <main>
+      <section class="about-hero">
+        <div class="about-hero-image"></div>
+        <div class="container about-hero-content reveal">
+          <p class="eyebrow eyebrow-light">WHO WE ARE</p>
+          <h1>Empowering people to <span class="lead">lead change.</span></h1>
+          <p>
+            THAMANI is a women and youth focused, not-for-profit organization
+            committed to inclusive and sustainable development.
+          </p>
+        </div>
+      </section>
+      <section class="about-intro">
+        <div class="container about-intro-grid">
+          <div class="about-intro-image reveal">
+            <img
+              alt="THAMANI community engagement"
+              src="images/hero-home-1.webp"
+            />
+          </div>
+          <div class="about-intro-copy reveal">
+            <p class="eyebrow">ABOUT THAMANI</p>
+            <h2>Cultivating human potential for <em>lasting change.</em></h2>
+            <p>
+              THAMANI for Women and Youth Development Initiative is a Nigerian,
+              grassroots-focused non-governmental organisation committed to
+              advancing women and youth inclusion, civic participation,
+              leadership, peacebuilding, education, gender justice, economic
+              resilience and community development.
+            </p>
+            <p>
+              Established in 2020 and registered with the Corporate Affairs
+              Commission as an Incorporated Trustee in 2023, THAMANI works
+              primarily across Northern Nigeria in partnership with communities,
+              government institutions, civil society organisations, youth
+              networks, women-led groups, traditional and religious
+              institutions, and development partners.
+            </p>
+            <p>
+              We seek to build empowered, inclusive and resilient communities
+              where women and young people are active drivers of social change,
+              accountable governance, peace and sustainable development.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="vision-mission">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">OUR DIRECTION</p>
+            <h2>What guides <em>our work.</em></h2>
+          </div>
+          <div class="vm-grid">
+            <article class="vm-card reveal">
+              <span class="vm-number">VISION</span>
+              <h3>
+                We envision a just and inclusive Nigeria where women and youth
+                thrive, advancing empowerment, equity and participation.
+              </h3>
+            </article>
+            <article class="vm-card reveal">
+              <span class="vm-number">MISSION</span>
+              <h3>
+                To strengthen underserved and marginalized communities through
+                inclusive programs, advocacy and partnerships that promote
+                equity, participation and sustainable development in Nigeria.
+              </h3>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="story-page">
+        <div class="container story-page-grid">
+          <div class="story-page-copy reveal">
+            <p class="eyebrow">OUR STORY</p>
+            <h2>
+              From a shared commitment to
+              <em>community transformation.</em>
+            </h2>
+            <p>
+              Our work is grounded in the belief that lasting change is achieved
+              when communities have the knowledge, platforms, resources and
+              agency to identify and address the challenges affecting them.
+            </p>
+            <p>
+              Since its inception, THAMANI has worked at the intersection of
+              grassroots mobilisation, capacity strengthening, policy advocacy,
+              community organising and social innovation.
+            </p>
+            <p>
+              Using participatory and rights-based approaches, we strengthen
+              community leadership, expand civic and economic opportunities,
+              promote social cohesion and influence public policy. We place
+              strong emphasis on locally owned solutions, evidence-based
+              advocacy, digital engagement and approaches that can be sustained
+              beyond individual projects.
+            </p>
+          </div>
+          <div class="story-page-image reveal">
+            <img
+              alt="THAMANI working with communities"
+              src="images/story.webp"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="impact-section about-impact-section" id="about-impact">
+        <div class="container impact-wrap">
+          <div class="impact-intro reveal">
+            <p class="eyebrow">OUR IMPACT</p>
+            <h2>Participation that creates <em>measurable change.</em></h2>
+            <p>
+              Across our programmes, THAMANI combines capacity strengthening,
+              community organising and advocacy to build lasting local impact.
+            </p>
+          </div>
+          <div class="stats-grid">
+            <div class="stat reveal">
+              <strong data-count="60">0</strong>
+              <span>Youths trained on digital and protest rights</span>
+            </div>
+            <div class="stat reveal">
+              <strong data-count="60">0</strong>
+              <span
+                >Youths trained on participation, citizen accountability and
+                electioneering advocacy</span
+              >
+            </div>
+            <div class="stat reveal">
+              <strong data-count="36">0</strong>
+              <span
+                >Community women leaders trained on GBV referrals, prevention
+                and health support</span
+              >
+            </div>
+            <div class="stat reveal">
+              <strong data-count="1">0</strong>
+              <span>Truth &amp; Justice Committee established</span>
+            </div>
+            <div class="stat reveal">
+              <strong data-count="7">0</strong>
+              <span>VSLA groups with 175 active members</span>
+            </div>
+            <div class="stat reveal">
+              <strong data-count="8" data-prefix="₦" data-suffix="M">0</strong>
+              <span>VSLA assets and member savings accumulated in 2 years</span>
+            </div>
+            <div class="stat reveal">
+              <strong data-count="3">0</strong>
+              <span>Policy documents supporting advocacy across 2 states</span>
+            </div>
+            <div class="stat reveal">
+              <strong data-count="5">0</strong>
+              <span
+                >Civic events promoting political participation and voter
+                sensitisation</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="values-section">
+        <div class="container">
+          <div class="values-heading reveal">
+            <p class="eyebrow">CORE VALUES</p>
+            <h2>The principles behind <em>our work.</em></h2>
+            <p>
+              These values shape how THAMANI delivers interventions, builds
+              partnerships and works with communities.
+            </p>
+          </div>
+          <div class="values-grid">
+            <article class="value-card reveal">
+              <span class="value-index">01</span>
+              <h3>Excellence</h3>
+              <p>Delivering high-quality, impactful interventions.</p>
+            </article>
+            <article class="value-card reveal">
+              <span class="value-index">02</span>
+              <h3>Inclusivity</h3>
+              <p>Leaving no one behind.</p>
+            </article>
+            <article class="value-card reveal">
+              <span class="value-index">03</span>
+              <h3>Empowerment</h3>
+              <p>Building agency and leadership.</p>
+            </article>
+            <article class="value-card reveal">
+              <span class="value-index">04</span>
+              <h3>Collaboration</h3>
+              <p>Working through partnerships.</p>
+            </article>
+            <article class="value-card reveal">
+              <span class="value-index">05</span>
+              <h3>Integrity &amp; Accountability</h3>
+              <p>Transparency in action.</p>
+            </article>
+            <article class="value-card reveal">
+              <span class="value-index">06</span>
+              <h3>Sustainability &amp; Innovation</h3>
+              <p>Long-term, adaptive solutions.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="about-cta">
+        <div class="container">
+          <div class="cta-box reveal">
+            <div>
+              <p class="eyebrow">WORK WITH US</p>
+              <h2>
+                Be part of building more
+                <em>resilient communities.</em>
+              </h2>
+            </div>
+            <a class="btn btn-primary" href="volunteer.html">
+              Get Involved <span>→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer" id="contact-footer">
+      <div class="container footer-top">
+        <div class="footer-brand">
+          <a class="brand brand-light brand-logo-link" href="index.html"
+            ><img
+              alt="THAMANI for Women and Youth Development Initiative"
+              class="brand-logo"
+              src="images/thamani-logo.png"
+          /></a>
+          <p>
+            Empowering Women and Youth.<br />Building Resilient Communities.
+          </p>
+          <a class="footer-email" href="mailto:thamaniinitiative5@gmail.com"
+            >thamaniinitiative5@gmail.com</a
+          >
+        </div>
+        <div class="footer-links">
+          <div>
+            <h4>Explore</h4>
+            <a href="who-we-are.html">About Us</a>
+            <a href="index.html#focus">What We Do</a>
+            <a href="index.html#impact">Our Impact</a>
+            <a href="programmes-2.html">Programs</a
+            ><a href="resources.html">Resources</a>
+          </div>
+          <div>
+            <h4>Get Involved</h4>
+            <a href="volunteer.html#volunteer">Volunteer With Us</a>
+            <a href="volunteer.html#partner">Partner With Us</a
+            ><a href="careers.html">Careers &amp; Opportunities</a>
+            <a href="donate.html#support-work">Support Our Work</a>
+            <a href="donate.html#general-donation">Donate</a>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <a href="tel:08137076501">+234 813 707 6501</a>
+            <a href="tel:+2347034912246">+234 703 491 2246</a>
+            <span
+              >Behind Bazma Plaza,<br />Yelwa Makaranta,<br />Bauchi State,
+              Nigeria.</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span
+          >© <span id="year"></span> THAMANI for Women and Youth Development
+          Initiative.</span
+        >
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

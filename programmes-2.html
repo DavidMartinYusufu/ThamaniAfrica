@@ -1,0 +1,1516 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Programmes | THAMANI</title>
+    <meta
+      content="Explore THAMANI programmes supporting women, youth and resilient communities across Northern Nigeria."
+      name="description"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <style>
+      .programmes-hero {
+        min-height: 68svh;
+        display: grid;
+        align-items: end;
+        position: relative;
+        overflow: hidden;
+        background: #211816;
+        color: #fff;
+      }
+      .programmes-hero-image {
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(
+            90deg,
+            rgba(25, 14, 12, 0.86),
+            rgba(25, 14, 12, 0.53) 48%,
+            rgba(25, 14, 12, 0.16)
+          ),
+          url("images/ProgrammesHero.webp") center/cover no-repeat;
+      }
+      .programmes-hero-content {
+        position: relative;
+        z-index: 1;
+        padding: 115px 0 72px;
+      }
+      .programmes-hero h1 {
+        max-width: 850px;
+        font-size: clamp(3rem, 6.5vw, 6rem);
+        line-height: 0.94;
+        letter-spacing: -0.065em;
+        margin: 12px 0 22px;
+      }
+      .programmes-hero h1 em {
+        color: var(--yellow);
+        font-style: normal;
+      }
+      .programmes-hero-content > p:last-child {
+        max-width: 590px;
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.7;
+        font-size: 1rem;
+      }
+      .programmes-intro {
+        padding: 95px 0 70px;
+      }
+      .programmes-intro-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.35fr;
+        gap: 70px;
+      }
+      .programmes-intro h2 {
+        font-size: clamp(2.1rem, 4vw, 3.7rem);
+        line-height: 1;
+        margin: 10px 0;
+      }
+      .programmes-intro-copy {
+        border-left: 1px solid var(--line);
+        padding-left: 30px;
+      }
+      .programmes-intro-copy p {
+        max-width: 650px;
+        line-height: 1.75;
+        color: var(--muted);
+        margin: 0 0 15px;
+      }
+      .programme-list {
+        background: #f9f5f2;
+        padding: 90px 0;
+      }
+      .programme-list-heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        margin-bottom: 42px;
+      }
+      .programme-list-heading h2 {
+        font-size: clamp(2.2rem, 4.5vw, 4rem);
+        line-height: 0.98;
+        margin: 10px 0;
+      }
+      .programme-list-heading > p {
+        max-width: 390px;
+        color: var(--muted);
+        line-height: 1.7;
+        margin: 0;
+      }
+      .programme-detail {
+        display: grid;
+        grid-template-columns: 80px 1fr 1.1fr;
+        gap: 30px;
+        padding: 38px 0;
+        border-top: 1px solid rgba(33, 24, 22, 0.14);
+      }
+      .programme-detail:last-child {
+        border-bottom: 1px solid rgba(33, 24, 22, 0.14);
+      }
+      .programme-detail-number {
+        font-family: Manrope, sans-serif;
+        font-weight: 800;
+        font-size: 0.6875rem;
+        color: var(--red);
+        letter-spacing: 0.12em;
+        padding-top: 5px;
+      }
+      .programme-detail h3 {
+        font-size: clamp(1.35rem, 2.2vw, 2rem);
+        line-height: 1.1;
+        margin: 0;
+        max-width: 360px;
+      }
+      .programme-detail-content p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.72;
+        font-size: 0.875rem;
+      }
+      .programme-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+        margin-top: 18px;
+      }
+      .programme-meta span {
+        padding: 6px 9px;
+        border-radius: 100px;
+        background: #fff;
+        color: var(--red);
+        font-size: 0.625rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+      }
+      .programme-feature {
+        padding: 100px 0;
+      }
+      .programme-feature-grid {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 65px;
+        align-items: center;
+      }
+      .programme-feature-image {
+        min-height: 520px;
+        border-radius: var(--radius);
+        overflow: hidden;
+        background:
+          linear-gradient(
+            90deg,
+            rgba(25, 14, 12, 0.08),
+            rgba(25, 14, 12, 0.02)
+          ),
+          url("images/h8.jpg") center/cover no-repeat;
+        box-shadow: 0 20px 55px rgba(33, 24, 22, 0.1);
+      }
+      .programme-feature-copy h2 {
+        font-size: clamp(2rem, 4vw, 3.5rem);
+        line-height: 1.02;
+        margin: 10px 0 22px;
+      }
+      .programme-feature-copy p {
+        color: var(--muted);
+        line-height: 1.75;
+      }
+      .feature-results {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-top: 28px;
+      }
+      .feature-result {
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: #fff;
+      }
+      .feature-result strong {
+        display: block;
+        color: var(--red);
+        font-family: Manrope, sans-serif;
+        font-size: 1.6rem;
+        line-height: 1;
+        margin-bottom: 7px;
+      }
+      .feature-result span {
+        color: var(--muted);
+        font-size: 0.875rem;
+        line-height: 1.45;
+      }
+      .programme-cta {
+        padding: 85px 0;
+        background: #f9f5f2;
+      }
+      .programme-cta .cta-box {
+        background: #cda29a;
+      }
+      @media (max-width: 800px) {
+        .programmes-hero {
+          min-height: 610px;
+        }
+        .programmes-intro,
+        .programme-list,
+        .programme-feature {
+          padding: 70px 0;
+        }
+        .programmes-intro-grid,
+        .programme-feature-grid {
+          grid-template-columns: 1fr;
+          gap: 35px;
+        }
+        .programmes-intro-copy {
+          padding-left: 22px;
+        }
+        .programme-list-heading {
+          display: block;
+          margin-bottom: 25px;
+        }
+        .programme-list-heading > p {
+          margin-top: 18px;
+        }
+        .programme-detail {
+          grid-template-columns: 55px 1fr;
+          gap: 18px;
+        }
+        .programme-detail-content {
+          grid-column: 2;
+        }
+        .programme-feature-image {
+          min-height: 380px;
+          order: 2;
+        }
+        .programme-feature-copy {
+          order: 1;
+        }
+      }
+      @media (max-width: 560px) {
+        .programmes-hero-content {
+          padding-bottom: 55px;
+        }
+        .programmes-hero h1 {
+          font-size: clamp(2.65rem, 14vw, 4rem);
+        }
+        .programme-detail {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+        .programme-detail-content {
+          grid-column: auto;
+        }
+        .programme-feature-image {
+          min-height: 330px;
+        }
+        .feature-results {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* Programme cards — homepage-inspired */
+      .programs-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+      .programs-card {
+        min-height: 390px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 30px;
+        border-radius: 16px;
+        overflow: hidden;
+        isolation: isolate;
+        color: #fff;
+        background: #7e4f51;
+        box-shadow: 0 12px 30px rgba(33, 24, 22, 0.08);
+        transition:
+          transform 0.35s ease,
+          box-shadow 0.35s ease;
+      }
+      .programs-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        background: linear-gradient(
+          180deg,
+          rgba(33, 24, 22, 0.02) 20%,
+          rgba(33, 24, 22, 0.84) 100%
+        );
+      }
+      .programs-card::after {
+        content: "";
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        right: -55px;
+        top: -55px;
+        border-radius: 50%;
+        border: 28px solid rgba(249, 189, 28, 0.16);
+        z-index: -1;
+        transition: transform 0.4s ease;
+      }
+      .programs-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 22px 45px rgba(33, 24, 22, 0.15);
+      }
+      .programs-card:hover::after {
+        transform: scale(1.2);
+      }
+      .programs-card-image {
+        position: absolute;
+        inset: 0;
+        z-index: -3;
+        background-position: center;
+        background-size: cover;
+        transition: transform 0.5s ease;
+      }
+      .programs-card:hover .programs-card-image {
+        transform: scale(1.05);
+      }
+      .programs-card:nth-child(1) .programs-card-image {
+        background-image: url("images/YouthCopee.webp");
+      }
+      .programs-card:nth-child(2) .programs-card-image {
+        background-image: url("images/YouthCare.webp");
+      }
+      .programs-card:nth-child(3) .programs-card-image {
+        background-image: url("images/Scale.webp");
+      }
+      .programs-card:nth-child(4) .programs-card-image {
+        background-image: url("images/VLSA.webp");
+      }
+      .programs-card:nth-child(5) .programs-card-image {
+        background-image: url("images/HerVoice.webp");
+      }
+      .programs-card-top {
+        position: absolute;
+        top: 24px;
+        left: 26px;
+        right: 26px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .programs-number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        font-family: Manrope, sans-serif;
+        font-size: 0.625rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+      }
+      .programs-arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: #f9bd1c;
+        color: #211816;
+        font-size: 1rem;
+        font-weight: 700;
+        transition: transform 0.3s ease;
+      }
+      .programs-card:hover .programs-arrow {
+        transform: translate(4px, -4px);
+      }
+      .programs-card-content {
+        position: relative;
+        z-index: 1;
+      }
+      .programs-card-content h3 {
+        max-width: 360px;
+        margin: 0 0 13px;
+        color: #fff;
+        font-size: clamp(1.3rem, 2vw, 1.75rem);
+        line-height: 1.08;
+      }
+      .programs-card-content p {
+        max-width: 390px;
+        margin: 0 0 18px;
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 0.875rem;
+        line-height: 1.6;
+      }
+      .programs-card-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .programs-card-meta span {
+        padding: 6px 8px;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 100px;
+        background: rgba(255, 255, 255, 0.08);
+        color: #fff;
+        font-size: 0.625rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+      }
+      .programs-card-wide {
+        grid-column: span 2;
+        min-height: 340px;
+      }
+      @media (max-width: 900px) {
+        .programs-cards {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .programs-card-wide {
+          grid-column: span 2;
+        }
+      }
+      @media (max-width: 560px) {
+        .programme-list {
+          padding: 70px 0;
+        }
+        .programs-cards {
+          grid-template-columns: 1fr;
+          gap: 14px;
+        }
+        .programs-card,
+        .programs-card-wide {
+          grid-column: auto;
+          min-height: 370px;
+        }
+        .programs-card {
+          padding: 25px;
+        }
+      }
+
+      /* =========================================================
+   PROGRAMME DETAIL EXPERIENCE
+   Page-specific: programmes-2.html only
+   ========================================================= */
+
+      .programs-card-link {
+        display: inline-flex;
+        align-items: center;
+        margin-top: 16px;
+        color: #f9bd1c;
+        font-size: 0.75rem;
+        font-weight: 800;
+        border-bottom: 1px solid rgba(249, 189, 28, 0.5);
+        padding-bottom: 3px;
+      }
+
+      .programs-card-link:hover {
+        color: #fff;
+        border-bottom-color: #fff;
+      }
+
+      .programme-details {
+        background: #fff;
+      }
+
+      .program-detail-section {
+        padding: 105px 0;
+        scroll-margin-top: 78px;
+        background: #fff;
+        border-top: 1px solid var(--line);
+      }
+
+      .program-detail-alt {
+        background: #f9f5f2;
+      }
+
+      .program-detail-grid {
+        display: grid;
+        grid-template-columns: 0.95fr 1.05fr;
+        gap: clamp(48px, 6vw, 82px);
+        align-items: center;
+      }
+
+      .program-detail-grid-reverse .program-detail-media {
+        order: 2;
+      }
+
+      .program-detail-grid-reverse .program-detail-copy {
+        order: 1;
+      }
+
+      .program-detail-media {
+        position: relative;
+        min-height: 500px;
+        border-radius: 18px;
+        overflow: hidden;
+        background: #211816;
+        box-shadow: 0 20px 55px rgba(33, 24, 22, 0.1);
+      }
+
+      .program-detail-media::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          transparent 55%,
+          rgba(25, 14, 12, 0.6)
+        );
+        pointer-events: none;
+      }
+
+      .program-detail-media img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        min-height: 500px;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .program-detail-index {
+        position: absolute;
+        left: 20px;
+        bottom: 18px;
+        z-index: 2;
+        padding: 7px 10px;
+        border-radius: 5px;
+        background: #f9bd1c;
+        color: #211816;
+        font-size: 0.625rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+      }
+
+      .program-detail-copy {
+        max-width: 650px;
+      }
+
+      .program-detail-copy h2 {
+        font-size: clamp(2rem, 4vw, 3.5rem);
+        line-height: 1.02;
+        margin: 10px 0 24px;
+      }
+
+      .program-detail-copy > p:not(.eyebrow) {
+        font-size: 1rem;
+        line-height: 1.78;
+        margin-bottom: 15px;
+      }
+
+      .program-partner-line {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 7px;
+        margin-top: 25px;
+        padding: 15px 0;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .program-partner-line span {
+        color: var(--red);
+        font-size: 0.625rem;
+        font-weight: 800;
+        letter-spacing: 0.09em;
+      }
+
+      .program-partner-line strong {
+        font-family: "Manrope", sans-serif;
+        font-size: 0.8rem;
+      }
+
+      .program-partner-line i {
+        color: var(--yellow);
+        font-style: normal;
+      }
+
+      .program-activity-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 24px;
+      }
+
+      .program-activity-list span {
+        padding: 8px 11px;
+        border: 1px solid var(--line);
+        border-radius: 100px;
+        background: #fff;
+        color: var(--ink);
+        font-size: 0.625rem;
+        font-weight: 700;
+      }
+
+      .program-detail-alt .program-activity-list span {
+        background: rgba(255, 255, 255, 0.75);
+      }
+
+      .program-resource-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 25px;
+        color: var(--red);
+        font-size: 0.875rem;
+        font-weight: 800;
+        border-bottom: 1px solid rgba(155, 40, 32, 0.35);
+        padding-bottom: 4px;
+      }
+
+      .program-resource-link span {
+        color: var(--yellow);
+      }
+
+      .program-impact-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1px;
+        margin-top: 55px;
+        background: rgba(155, 40, 32, 0.13);
+        border: 1px solid rgba(155, 40, 32, 0.13);
+        border-radius: 15px;
+        overflow: hidden;
+      }
+
+      .program-impact-grid-compact {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .program-impact-stat {
+        min-height: 155px;
+        padding: 25px;
+        background: #9b2820;
+        color: #fff;
+      }
+
+      .program-detail-alt .program-impact-stat {
+        background: #7e4f51;
+      }
+
+      .program-impact-stat strong {
+        display: block;
+        color: #f9bd1c;
+        font-family: "Manrope", sans-serif;
+        font-size: clamp(2rem, 3.4vw, 3.3rem);
+        line-height: 1;
+        margin-bottom: 12px;
+      }
+
+      .program-impact-stat span {
+        display: block;
+        max-width: 240px;
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 0.875rem;
+        line-height: 1.55;
+      }
+
+      /* SCALE: Policy advocacy nested inside the programme */
+      .scale-policy-block {
+        margin-top: 60px;
+        padding: 38px;
+        border-radius: 18px;
+        background: #211816;
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .scale-policy-block::after {
+        content: "POLICY";
+        position: absolute;
+        right: -20px;
+        top: -18px;
+        font-family: "Manrope", sans-serif;
+        font-size: clamp(5rem, 12vw, 10rem);
+        font-weight: 800;
+        letter-spacing: -0.08em;
+        color: rgba(255, 255, 255, 0.025);
+        pointer-events: none;
+      }
+
+      .scale-policy-block > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      .scale-policy-heading {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: end;
+        margin-bottom: 30px;
+      }
+
+      .scale-policy-heading .eyebrow {
+        color: #f9bd1c;
+      }
+
+      .scale-policy-heading h3 {
+        max-width: 620px;
+        color: #fff;
+        font-size: clamp(1.8rem, 3vw, 2.8rem);
+        margin-top: 9px;
+      }
+
+      .scale-policy-heading h3 em {
+        color: #f9bd1c;
+        font-style: normal;
+      }
+
+      .scale-policy-heading > p {
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+
+      .policy-outcome-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .policy-outcome-card {
+        min-height: 235px;
+        padding: 24px;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.065);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .policy-outcome-card > span {
+        display: inline-flex;
+        width: 34px;
+        height: 34px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: #f9bd1c;
+        color: #211816;
+        font-size: 0.625rem;
+        font-weight: 800;
+      }
+
+      .policy-outcome-card h4 {
+        color: #fff;
+        font-size: 1.05rem;
+        margin: 24px 0 10px;
+      }
+
+      .policy-outcome-card p {
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 0.875rem;
+        line-height: 1.6;
+      }
+
+      @media (max-width: 900px) {
+        .program-detail-section {
+          padding: 82px 0;
+        }
+
+        .program-detail-grid {
+          grid-template-columns: 1fr;
+          gap: 38px;
+        }
+
+        .program-detail-grid-reverse .program-detail-media,
+        .program-detail-grid-reverse .program-detail-copy {
+          order: initial;
+        }
+
+        .program-detail-media,
+        .program-detail-media img {
+          min-height: 410px;
+        }
+
+        .program-impact-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .scale-policy-heading {
+          grid-template-columns: 1fr;
+          gap: 18px;
+        }
+
+        .policy-outcome-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .policy-outcome-card {
+          min-height: auto;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .program-detail-section {
+          padding: 66px 0;
+        }
+
+        .program-detail-media,
+        .program-detail-media img {
+          min-height: 330px;
+        }
+
+        .program-impact-grid,
+        .program-impact-grid-compact {
+          grid-template-columns: 1fr;
+        }
+
+        .program-impact-stat {
+          min-height: 130px;
+        }
+
+        .scale-policy-block {
+          padding: 28px 20px;
+          margin-top: 42px;
+        }
+
+        .program-partner-line {
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a
+          aria-label="THAMANI home"
+          class="brand brand-logo-link"
+          href="index.html"
+          ><img
+            alt="THAMANI for Women and Youth Development Initiative"
+            class="brand-logo"
+            src="images/thamani-logo.png"
+        /></a>
+        <button
+          aria-expanded="false"
+          aria-label="Open navigation"
+          class="menu-toggle"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <nav aria-label="Main navigation" class="site-nav">
+          <a data-nav="home" href="index.html">Home</a>
+          <a data-nav="about" href="who-we-are.html">About Us</a>
+          <a class="active" data-nav="programmes" href="programmes-2.html"
+            >Programs</a
+          ><a data-nav="resources" href="resources.html">Resources</a>
+          <a data-nav="contact" href="contact.html">Contact</a>
+          <div class="nav-dropdown" data-nav="involved">
+            <button
+              aria-expanded="false"
+              class="nav-dropdown-toggle"
+              type="button"
+            >
+              Get Involved
+              <span aria-hidden="true" class="dropdown-caret"></span>
+            </button>
+            <div class="nav-dropdown-menu">
+              <a href="volunteer.html#volunteer">Volunteer With Us</a>
+              <a href="volunteer.html#partner">Partner With Us</a
+              ><a href="careers.html">Careers &amp; Opportunities</a>
+              <a href="donate.html#support-work">Support Our Work</a>
+              <a href="donate.html#general-donation">Donate</a>
+            </div>
+          </div>
+        </nav>
+        <a class="nav-donate header-donate" href="donate.html">Donate</a>
+      </div>
+    </header>
+    <main>
+      <section class="programmes-hero">
+        <div class="programmes-hero-image"></div>
+        <div class="container programmes-hero-content reveal">
+          <p class="eyebrow eyebrow-light">OUR PROGRAMMES</p>
+          <h1>Turning ideas into <em>community action.</em></h1>
+          <p>
+            THAMANI combines advocacy, capacity strengthening, policy engagement
+            and grassroots action to support more peaceful, inclusive and
+            resilient communities across Northern Nigeria.
+          </p>
+        </div>
+      </section>
+      <section class="programmes-intro">
+        <div class="container programmes-intro-grid">
+          <div class="reveal">
+            <p class="eyebrow">WHAT WE DO</p>
+            <h2>Programmes built around <em>people.</em></h2>
+          </div>
+          <div class="programmes-intro-copy reveal">
+            <p>
+              THAMANI's programmes are designed to cultivate human potential,
+              strengthen systems and create opportunities for women, young
+              people and communities to lead sustainable change.
+            </p>
+            <p>
+              Our work integrates Gender Equality and Social Inclusion (GESI),
+              education, governance, religious tolerance, gender-based violence
+              prevention and conflict-sensitive approaches across interventions.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="programme-list">
+        <div class="container">
+          <div class="programme-list-heading reveal">
+            <div>
+              <p class="eyebrow">KEY PROGRAMMES</p>
+              <h2>
+                Initiatives making <br />
+                <em>an impact.</em>
+              </h2>
+              <p>
+                Explore THAMANI’s five flagship programme areas, then select a
+                card to view the approach, activities, partners and results in
+                more detail.
+              </p>
+            </div>
+          </div>
+          <div class="programs-cards">
+            <article class="programs-card reveal" id="youthcopee-card">
+              <div class="programs-card-image"></div>
+              <div class="programs-card-top">
+                <span class="programs-number">01</span>
+                <!-- <span class="programs-arrow">↗</span> -->
+              </div>
+              <div class="programs-card-content">
+                <h3>YouthCOPEE</h3>
+                <p>
+                  Youth civic engagement, democratic participation and digital
+                  rights.
+                </p>
+                <!-- <div class="programs-card-meta">
+                  <span>YOUTH</span><span>DEMOCRACY</span
+                  ><span>DIGITAL RIGHTS</span>
+                </div> -->
+                <a class="programs-card-link" href="#youthcopee-detail"
+                  >Explore details ↓</a
+                >
+              </div>
+            </article>
+            <article class="programs-card reveal" id="youthcare-card">
+              <div class="programs-card-image"></div>
+              <div class="programs-card-top">
+                <span class="programs-number">02</span>
+                <!-- <span class="programs-arrow">↗</span> -->
+              </div>
+              <div class="programs-card-content">
+                <h3>YouthCARE / FoRB</h3>
+                <p>
+                  Peacebuilding, freedom of religion or belief and youth-led
+                  digital peacebuilding.
+                </p>
+                <!-- <div class="programs-card-meta">
+                  <span>PEACEBUILDING</span><span>FoRB</span
+                  ><span>SOCIAL COHESION</span>
+                </div> -->
+                <a class="programs-card-link" href="#youthcare-detail"
+                  >Explore details ↓</a
+                >
+              </div>
+            </article>
+            <article class="programs-card reveal" id="scale-card">
+              <div class="programs-card-image"></div>
+              <div class="programs-card-top">
+                <span class="programs-number">03</span>
+                <!-- <span class="programs-arrow">↗</span> -->
+              </div>
+              <div class="programs-card-content">
+                <h3>USAID-Palladium SCALE</h3>
+                <p>
+                  Education, child protection, safe schools, policy advocacy and
+                  community accountability.
+                </p>
+                <!-- <div class="programs-card-meta">
+                  <span>SAFE SCHOOLS</span><span>CHILD PROTECTION</span
+                  ><span>POLICY</span>
+                </div> -->
+                <a class="programs-card-link" href="#scale-detail"
+                  >Explore details ↓</a
+                >
+              </div>
+            </article>
+            <article
+              class="programs-card programs-card-wide reveal"
+              id="vsla-card"
+            >
+              <div class="programs-card-image"></div>
+              <div class="programs-card-top">
+                <span class="programs-number">04</span>
+                <!-- <span class="programs-arrow">↗</span> -->
+              </div>
+              <div class="programs-card-content">
+                <h3>Village Savings &amp; Loan Association (VSLA)</h3>
+                <p>
+                  Women’s economic empowerment, financial inclusion and
+                  community resilience.
+                </p>
+                <!-- <div class="programs-card-meta">
+                  <span>WOMEN</span><span>VSLA</span><span>RESILIENCE</span>
+                </div> -->
+                <a class="programs-card-link" href="#vsla-detail"
+                  >Explore details ↓</a
+                >
+              </div>
+            </article>
+            <article class="programs-card reveal" id="hervoice-card">
+              <div class="programs-card-image"></div>
+              <div class="programs-card-top">
+                <span class="programs-number">05</span>
+                <!-- <span class="programs-arrow">↗</span> -->
+              </div>
+              <div class="programs-card-content">
+                <h3>#HerVoice Project</h3>
+                <p>
+                  Women’s leadership, gender justice, protection and
+                  gender-based violence prevention.
+                </p>
+                <!-- <div class="programs-card-meta">
+                  <span>WOMEN</span><span>GENDER JUSTICE</span
+                  ><span>GBV PREVENTION</span>
+                </div> -->
+                <a class="programs-card-link" href="#hervoice-detail"
+                  >Explore details ↓</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="programme-details" id="programme-details">
+        <!-- YOUTHCOPEE -->
+        <article class="program-detail-section" id="youthcopee-detail">
+          <div class="container">
+            <div class="program-detail-grid">
+              <div class="program-detail-media reveal">
+                <img
+                  alt="YouthCOPEE youth civic engagement activities"
+                  src="images/YouthCopee.webp"
+                />
+                <span class="program-detail-index">01 / YOUTHCOPEE</span>
+              </div>
+              <div class="program-detail-copy reveal">
+                <p class="eyebrow">
+                  YOUTH CIVIC ENGAGEMENT, DEMOCRATIC PARTICIPATION &amp; DIGITAL
+                  RIGHTS
+                </p>
+                <h2>YouthCOPEE <em>&amp; digital civic action.</em></h2>
+                <p>
+                  Through the Youth Collective Action for Political and
+                  Electoral Engagement (YouthCOPEE) and PowerShift for Digital
+                  Rights in Northern Nigeria, implemented with support from
+                  Yiaga Africa and funded by the National Endowment for
+                  Democracy (NED), THAMANI strengthens young people’s capacity
+                  to participate meaningfully in democratic processes, civic
+                  engagement, peacebuilding and advocacy.
+                </p>
+                <p>
+                  The approach combines capacity-building bootcamps, youth-led
+                  civic actions, public dialogues, town halls, creative civic
+                  campaigns and digital engagement. Beyond training, young
+                  activists are supported to translate knowledge into collective
+                  action and connect across states for learning, collaboration
+                  and joint advocacy.
+                </p>
+                <div class="program-partner-line">
+                  <span>IMPLEMENTATION</span>
+                  <strong>Yiaga Africa</strong>
+                  <i>•</i>
+                  <span>FUNDED BY</span>
+                  <strong>National Endowment for Democracy (NED)</strong>
+                </div>
+                <!-- <div class="program-activity-list">
+                  <span>Advocacy campaigns</span>
+                  <span>Public dialogues &amp; town halls</span>
+                  <span>Electoral reform</span>
+                  <span>Digital &amp; protest rights</span>
+                  <span>Youth-led civic actions</span>
+                  <span>Peer learning networks</span>
+                </div> -->
+                <a
+                  class="program-resource-link"
+                  href="resources/youthcopee-project-activity-report.pdf"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  View YouthCOPEE activity report <span>↗</span>
+                </a>
+              </div>
+            </div>
+            <div class="program-impact-grid reveal">
+              <div class="program-impact-stat">
+                <strong>60</strong
+                ><span>Youths trained on digital and protest rights</span>
+              </div>
+              <div class="program-impact-stat">
+                <strong>60</strong
+                ><span
+                  >Youths trained on participation, accountability and
+                  electioneering advocacy</span
+                >
+              </div>
+              <div class="program-impact-stat">
+                <strong>120</strong
+                ><span
+                  >Young civic activists reached through capacity-building
+                  bootcamps</span
+                >
+              </div>
+              <div class="program-impact-stat">
+                <strong>2</strong><span>States — Bauchi and Plateau</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- YOUTHCARE -->
+        <article
+          class="program-detail-section program-detail-alt"
+          id="youthcare-detail"
+        >
+          <div class="container">
+            <div class="program-detail-grid program-detail-grid-reverse">
+              <div class="program-detail-media reveal">
+                <img
+                  alt="YouthCARE peacebuilding and youth religious engagement"
+                  src="images/YouthCare.webp"
+                />
+                <span class="program-detail-index">02 / YOUTHCARE</span>
+              </div>
+              <div class="program-detail-copy reveal">
+                <p class="eyebrow">
+                  PEACEBUILDING, FREEDOM OF RELIGION OR BELIEF &amp; DIGITAL
+                  PEACEBUILDING
+                </p>
+                <h2>YouthCARE / FoRB <em>for peaceful communities.</em></h2>
+                <p>
+                  Through collaboration with Search for Common Ground and Young
+                  Leaders Network (YLN) under the YouthCARE project, THAMANI
+                  contributes to Freedom of Religion or Belief (FoRB), peaceful
+                  coexistence and constructive youth-religious engagement across
+                  Bauchi, Gombe and Plateau States.
+                </p>
+                <p>
+                  THAMANI’s engagement includes Common Ground Approach training,
+                  Early Warning and Early Response capacity strengthening,
+                  social media listening, communities of practice, peer-learning
+                  exchanges, Ask Me Anything webinars and youth religious
+                  advocacy. Digital platforms and youth influencers are also
+                  used to counter hate speech and amplify positive narratives of
+                  peace and unity.
+                </p>
+                <div class="program-partner-line">
+                  <span>IN COLLABORATION WITH</span>
+                  <strong>Search for Common Ground</strong>
+                  <i>•</i>
+                  <strong>Young Leaders Network</strong>
+                </div>
+                <!-- <div class="program-activity-list">
+                  <span>Common Ground Approach</span>
+                  <span>Early Warning &amp; Early Response</span>
+                  <span>Social media listening</span>
+                  <span>Digital peacebuilding</span>
+                  <span>Youth religious advocacy</span>
+                  <span>Peer-learning exchanges</span>
+                </div> -->
+              </div>
+            </div>
+            <div class="program-impact-grid reveal">
+              <div class="program-impact-stat">
+                <strong>22</strong
+                ><span>Youth-led and women-led CSOs reached</span>
+              </div>
+              <div class="program-impact-stat">
+                <strong>24</strong><span>Micro-influencers engaged</span>
+              </div>
+              <div class="program-impact-stat">
+                <strong>12</strong
+                ><span>Community social media stewards engaged</span>
+              </div>
+              <div class="program-impact-stat">
+                <strong>3</strong
+                ><span>States — Bauchi, Gombe and Plateau</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- SCALE -->
+        <article class="program-detail-section" id="scale-detail">
+          <div class="container">
+            <div class="program-detail-grid">
+              <div class="program-detail-media reveal">
+                <img
+                  alt="USAID Palladium SCALE Safe Schools advocacy"
+                  src="images/Scale.webp"
+                />
+                <span class="program-detail-index">03 / SCALE</span>
+              </div>
+              <div class="program-detail-copy reveal">
+                <p class="eyebrow">
+                  EDUCATION, CHILD PROTECTION &amp; SAFE SCHOOLS
+                </p>
+                <h2>USAID-Palladium SCALE <em>for safer learning.</em></h2>
+                <p>
+                  Through the SCALE (Strengthening Civic Advocacy and Local
+                  Engagement) Project under the USAID/Palladium Safe Schools
+                  programme, THAMANI contributes to advocacy for children’s
+                  right to safe, quality and violence-free education in Bauchi,
+                  Yobe and Borno States.
+                </p>
+                <p>
+                  A major component of the work supports domestication of the
+                  National Policy on Safe Schools and stronger state-level
+                  policy and institutional frameworks. THAMANI’s approach
+                  recognises that safe schools must be physically, socially and
+                  psychologically safe, with violence, discrimination and
+                  harmful practices addressed while the wellbeing of learners
+                  and teachers is prioritised.
+                </p>
+                <div class="program-partner-line">
+                  <span>PROGRAMME</span>
+                  <strong>USAID / Palladium Safe Schools</strong>
+                  <i>•</i>
+                  <span>REACH</span>
+                  <strong>Bauchi, Yobe &amp; Borno</strong>
+                </div>
+                <!-- <div class="program-activity-list">
+                  <span>Safe Schools policy</span>
+                  <span>Child protection</span>
+                  <span>Education advocacy</span>
+                  <span>Community accountability</span>
+                  <span>Stakeholder engagement</span>
+                  <span>Institutional strengthening</span>
+                </div> -->
+                <a
+                  class="program-resource-link"
+                  href="resources/safe-schools-policy-brief-northeast-nigeria.pdf"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  View Safe Schools policy brief <span>↗</span>
+                </a>
+              </div>
+            </div>
+            <div class="scale-policy-block reveal">
+              <div class="scale-policy-heading">
+                <div>
+                  <p class="eyebrow">
+                    POLICY ADVOCACY &amp; COMMUNITY ACCOUNTABILITY
+                  </p>
+                  <h3>
+                    Turning community voices into
+                    <em>policy and institutional change.</em>
+                  </h3>
+                </div>
+                <p>
+                  THAMANI combines grassroots mobilisation, evidence generation,
+                  stakeholder engagement, coalition building and strategic
+                  communication to create constructive engagement between
+                  citizens and decision-makers.
+                </p>
+              </div>
+              <div class="policy-outcome-grid">
+                <article class="policy-outcome-card">
+                  <span>01</span>
+                  <h4>Safe School Policies</h4>
+                  <p>
+                    Support for domestication of Safe School policies in Yobe
+                    and Bauchi States.
+                  </p>
+                </article>
+                <article class="policy-outcome-card">
+                  <span>02</span>
+                  <h4>GBV Policy Recommendations</h4>
+                  <p>
+                    Development of Bauchi policy recommendations on the effect
+                    of gender-based violence on community development health
+                    services.
+                  </p>
+                </article>
+                <article class="policy-outcome-card">
+                  <span>03</span>
+                  <h4>School Re-entry Policy</h4>
+                  <p>
+                    Policy support for pregnant and married adolescent girls in
+                    Bauchi State.
+                  </p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- VSLA -->
+        <article
+          class="program-detail-section program-detail-alt"
+          id="vsla-detail"
+        >
+          <div class="container">
+            <div class="program-detail-grid program-detail-grid-reverse">
+              <div class="program-detail-media reveal">
+                <img
+                  alt="Women participating in THAMANI VSLA programming"
+                  src="images/VLSA.webp"
+                />
+                <span class="program-detail-index">04 / VSLA</span>
+              </div>
+              <div class="program-detail-copy reveal">
+                <p class="eyebrow">
+                  ECONOMIC EMPOWERMENT, VSLA &amp; COMMUNITY RESILIENCE
+                </p>
+                <h2>Building financial <em>resilience and agency.</em></h2>
+                <p>
+                  THAMANI recognises that women’s empowerment cannot be
+                  separated from economic independence and household resilience.
+                  Its programming therefore integrates economic empowerment,
+                  climate-smart agriculture, financial inclusion and
+                  community-based livelihood approaches.
+                </p>
+                <p>
+                  Through Village Savings and Loan Associations, women
+                  strengthen savings cultures, access community-based financial
+                  resources, improve livelihoods and build their capacity to
+                  respond to household and economic shocks. In communities such
+                  as Lushi, this work is combined with GBV prevention,
+                  leadership development, community dialogue and collective
+                  action.
+                </p>
+                <!-- <div class="program-activity-list">
+                  <span>Women-led savings groups</span>
+                  <span>Financial inclusion</span>
+                  <span>Livelihood resilience</span>
+                  <span>Climate-smart agriculture</span>
+                  <span>Women’s leadership</span>
+                  <span>Collective action</span>
+                </div> -->
+              </div>
+            </div>
+            <div class="program-impact-grid reveal">
+              <div class="program-impact-stat">
+                <strong>7</strong
+                ><span>Women-led VSLA groups established and strengthened</span>
+              </div>
+              <div class="program-impact-stat">
+                <strong>175</strong
+                ><span>Women reached directly as active members</span>
+              </div>
+              <div class="program-impact-stat">
+                <strong>₦8M+</strong
+                ><span>Assets and member savings recorded</span>
+              </div>
+              <div class="program-impact-stat">
+                <strong>2</strong
+                ><span>Years of recorded savings and asset growth</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- HERVOICE -->
+        <article class="program-detail-section" id="hervoice-detail">
+          <div class="container">
+            <div class="program-detail-grid">
+              <div class="program-detail-media reveal">
+                <img
+                  alt="THAMANI HerVoice women leadership and GBV prevention"
+                  src="images/HerVoice.webp"
+                />
+                <span class="program-detail-index">05 / #HERVOICE</span>
+              </div>
+              <div class="program-detail-copy reveal">
+                <p class="eyebrow">
+                  WOMEN’S LEADERSHIP, GENDER JUSTICE &amp; GBV PREVENTION
+                </p>
+                <h2>#HerVoice <em>strengthening women’s agency.</em></h2>
+                <p>
+                  Through women-focused programming supported by Urgent Action
+                  Fund–Africa (UAF-Africa), THAMANI works with grassroots women,
+                  community leaders, men and boys, and local institutions to
+                  strengthen awareness, accountability and collective action
+                  around gender-based violence and women’s rights.
+                </p>
+                <p>
+                  #HerVoice creates platforms for grassroots women to strengthen
+                  their voices, leadership and engagement in addressing GBV and
+                  influencing community and institutional responses. Activities
+                  include community dialogues, stakeholder engagement, advocacy
+                  and stronger community-based mechanisms for prevention,
+                  accountability, referrals and response.
+                </p>
+                <div class="program-partner-line">
+                  <span>SUPPORTED BY</span>
+                  <strong>Urgent Action Fund–Africa (UAF-Africa)</strong>
+                </div>
+                <!-- <div class="program-activity-list">
+                  <span>Women’s leadership</span>
+                  <span>GBV prevention</span>
+                  <span>Community dialogues</span>
+                  <span>Stakeholder engagement</span>
+                  <span>Referral &amp; response</span>
+                  <span>Policy advocacy</span>
+                </div> -->
+                <a
+                  class="program-resource-link"
+                  href="resources/bauchi-gbv-policy-brief.pdf"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  View related GBV policy brief <span>↗</span>
+                </a>
+              </div>
+            </div>
+            <div class="program-impact-grid program-impact-grid-compact reveal">
+              <div class="program-impact-stat">
+                <strong>36</strong
+                ><span
+                  >Community women leaders trained on GBV referrals, prevention
+                  and health support</span
+                >
+              </div>
+              <div class="program-impact-stat">
+                <strong>1</strong
+                ><span>Truth &amp; Justice Committee established</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="programme-cta">
+        <div class="container">
+          <div class="cta-box reveal">
+            <div>
+              <p class="eyebrow">PARTNER WITH US</p>
+              <h2>
+                Stronger communities start with <em>collective action.</em>
+              </h2>
+              <p>
+                Partner with THAMANI to support programmes that empower women,
+                young people and communities to lead sustainable change.
+              </p>
+            </div>
+            <div class="cta-actions">
+              <a class="btn btn-dark" href="contact.html">Contact Us</a
+              ><a class="btn btn-primary" href="volunteer.html#partner"
+                >Get Involved <span>↗</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer" id="contact-footer">
+      <div class="container footer-top">
+        <div class="footer-brand">
+          <a class="brand brand-light brand-logo-link" href="index.html"
+            ><img
+              alt="THAMANI for Women and Youth Development Initiative"
+              class="brand-logo"
+              src="images/thamani-logo.png"
+          /></a>
+          <p>
+            Empowering Women and Youth.<br />Building Resilient Communities.
+          </p>
+          <a class="footer-email" href="mailto:thamaniinitiative5@gmail.com"
+            >thamaniinitiative5@gmail.com</a
+          >
+        </div>
+        <div class="footer-links">
+          <div>
+            <h4>Explore</h4>
+            <a href="who-we-are.html">About Us</a>
+            <a href="index.html#focus">What We Do</a>
+            <a href="index.html#impact">Our Impact</a>
+            <a href="programmes-2.html">Programs</a
+            ><a href="resources.html">Resources</a>
+          </div>
+          <div>
+            <h4>Get Involved</h4>
+            <a href="volunteer.html#volunteer">Volunteer With Us</a>
+            <a href="volunteer.html#partner">Partner With Us</a
+            ><a href="careers.html">Careers &amp; Opportunities</a>
+            <a href="donate.html#support-work">Support Our Work</a>
+            <a href="donate.html#general-donation">Donate</a>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <a href="tel:08137076501">+234 813 707 6501</a>
+            <a href="tel:+2347034912246">+234 703 491 2246</a>
+            <span
+              >Behind Bazma Plaza,<br />Yelwa Makaranta,<br />Bauchi State,
+              Nigeria.</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span
+          >© <span id="year"></span> THAMANI for Women and Youth Development
+          Initiative.</span
+        >
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
