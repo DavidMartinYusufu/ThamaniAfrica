@@ -2548,11 +2548,11 @@ main h3 + p {
 .resources-hero-bg,.careers-hero-bg{position:absolute;inset:0}
 .resources-hero-bg{
   background:linear-gradient(90deg,rgba(25,14,12,.90),rgba(25,14,12,.60) 52%,rgba(25,14,12,.18)),
-  url("images/ResourcesHero.webp") center/cover no-repeat
+  url("images/Scale.webp") center/cover no-repeat
 }
 .careers-hero-bg{
   background:linear-gradient(90deg,rgba(25,14,12,.90),rgba(25,14,12,.57) 52%,rgba(25,14,12,.16)),
-  url("images/h3.webp") center/cover no-repeat
+  url("images/YouthCare.webp") center/cover no-repeat
 }
 .resources-hero-content,.careers-hero-content{position:relative;z-index:1;padding:100px 0 68px}
 .resources-hero h1,.careers-hero h1{
@@ -2575,7 +2575,7 @@ main h3 + p {
 .resource-download-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .resource-download-grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
 .download-card{
-  padding:28px;border-radius:16px;background:#fff;border:1px solid var(--line);
+  min-height:300px;padding:28px;border-radius:16px;background:#fff;border:1px solid var(--line);
   display:flex;flex-direction:column;position:relative;overflow:hidden;
   transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease
 }
@@ -2589,12 +2589,12 @@ main h3 + p {
 .download-type{color:var(--red);font-size:.625rem;font-weight:800;letter-spacing:.12em}
 .download-card h3{margin:24px 0 12px;font-size:clamp(1.15rem,1.7vw,1.45rem)}
 .download-card p{font-size:.875rem;line-height:1.65}
-/* .download-meta{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px} */
+.download-meta{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}
 .download-meta span{
   padding:6px 9px;border-radius:100px;background:#fff;border:1px solid var(--line);
   color:var(--red);font-size:.625rem;font-weight:800;letter-spacing:.06em
 }
-.download-card .btn,.download-card .text-link{align-self:flex-start}
+.download-card .btn,.download-card .text-link{margin-top:auto;align-self:flex-start}
 .download-card-accent{background:#F3E3DE!important}
 .download-card-green{background:#EAF3EC!important}
 .download-card-green .download-type{color:#2F7D4A}
@@ -3230,5 +3230,24 @@ main h3 + p {
     width: 22px !important;
     height: 22px !important;
     stroke-width: 2.1 !important;
+  }
+}
+
+
+/* =========================================================
+   URGENT ACTION FUND AFRICA LOGO — HOME PARTNERS
+   ========================================================= */
+.partner-logo-card img[src$="partner-uaf-africa.png"] {
+  width: 100% !important;
+  height: 92px !important;
+  object-fit: contain !important;
+  transform: scale(1.42);
+  transform-origin: center;
+}
+
+@media (max-width: 650px) {
+  .partner-logo-card img[src$="partner-uaf-africa.png"] {
+    height: 82px !important;
+    transform: scale(1.35);
   }
 }
